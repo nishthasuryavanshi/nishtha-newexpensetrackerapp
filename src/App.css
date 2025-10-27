@@ -1,0 +1,190 @@
+/* 🌈 Root Variables - Teal & Blue Theme */
+:root {
+  --bg-primary: #eafaf9;
+  --bg-secondary: #f6fffe;
+  --bg-tertiary: #ffffff;
+  --bg-card: #b2dfdb;
+  --bg-hover: #00bfa6;
+  --text-primary: #00332c;
+  --text-secondary: #004d40;
+  --text-tertiary: #00695c;
+  --text-inverse: #ffffff;
+  --border-primary: #a7ffeb;
+  --border-secondary: #64ffda;
+  --border-focus: #00796b;
+  --accent-primary: #009688;
+  --accent-secondary: #26a69a;
+  --accent-success: #00796b;
+  --accent-warning: #ffb74d;
+  --accent-error: #e53935;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --radius-sm: 5px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --transition-fast: 150ms ease-in-out;
+  --transition-smooth: 300ms ease-in-out;
+}
+
+/* 🌙 Dark Theme */
+.dark {
+  --bg-primary: #0d1b1e;
+  --bg-secondary: #102a43;
+  --bg-tertiary: #1b3a4b;
+  --bg-card: #13333f;
+  --bg-hover: #1e555c;
+  --text-primary: #e0f2f1;
+  --text-secondary: #b2dfdb;
+  --text-tertiary: #80cbc4;
+  --text-inverse: #0d1b1e;
+  --border-primary: #2a5b6b;
+  --border-secondary: #4db6ac;
+  --border-focus: #26a69a;
+  --accent-primary: #00bfa6;
+  --accent-secondary: #4db6ac;
+  --accent-success: #26a69a;
+  --accent-warning: #ffb74d;
+  --accent-error: #ef5350;
+}
+
+/* 🌍 Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color var(--transition-smooth), color var(--transition-smooth);
+  font-size: 13px; /* Decreased global font size */
+}
+
+/* Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-primary);
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 160px;
+  background-color: var(--bg-secondary);
+  padding: 0.7rem; /* smaller padding */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-smooth);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 100vh;
+  background: linear-gradient(180deg, #00695c, #004d40);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-md);
+}
+
+.sidebar nav button {
+  background: none;
+  border: none;
+  color: #e0f2f1;
+  padding: 0.4rem 1rem; /* smaller padding */
+  text-align: left;
+  font-size: 0.78rem; /* Smaller text */
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sidebar nav button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar nav button.active {
+  background-color: #00bfa6;
+  color: #ffffff;
+  box-shadow: inset 3px 0 0 0 #004d40;
+}
+
+/* Header */
+header {
+  background-color: #009688;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.05rem; /* Decreased header text */
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-primary);
+  transition: all 0.3s ease;
+  padding: 0.6rem; /* smaller card padding */
+  font-size: 0.78rem; /* Smaller card text */
+  width: 85%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--accent-primary);
+  color: var(--text-inverse);
+  border: none;
+  padding: 7px 10px; /* smaller button */
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem; /* Smaller button text */
+}
+
+.btn:hover {
+  background-color: var(--accent-secondary);
+}
+
+.btn-danger {
+  background-color: var(--accent-error);
+}
+.btn-danger:hover {
+  background-color: #c62828;
+}
+
+/* App Title */
+.app-title {
+  color: #004d40;
+  font-weight: 700;
+  font-size: 1.05rem; /* Decreased app title */
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
